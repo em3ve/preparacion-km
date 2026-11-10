@@ -30,7 +30,7 @@ class Pago
     private array $detalleCursos = [];
 
 
-    //constructor de la clase recibe el identificador de usuario. 
+    //constructor de la clase recibe el identificador de estudiante y total. 
 
     public function __construct(
         int $idEstudiante,

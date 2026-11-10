@@ -11,3 +11,9 @@
 !/logs/empty
 
 /app/tmp/*
+
+
+# Evita la sincronización de los archivos de conexión con datos sensibles. 
+app/config/ConexionBaseDatos.php
+/app/config/ConexionBaseDatos.php
+ConexionBaseDatos.php
