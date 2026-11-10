@@ -25,9 +25,7 @@ $jsonCapturado   = '';
 $arregloResultado = null;
 ?>
 
-<!-- 
-Generación del documento HTML. 
--->
+<!-- Inicio del documento HTML. -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
