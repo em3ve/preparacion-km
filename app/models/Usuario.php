@@ -193,17 +193,17 @@ class Usuario
         // Creación del objeto pdo. 
         $pdo = $conexionObj->conectar();
 
-        // Intenta realizar una conexión a la base de datos. 
+        // Se evalúa si la conexión fue exitosa a la base de datos. 
         if ($pdo === null) {
-            echo "Error en la conexión a base de datos. ";
+            //echo "Error en la conexión a base de datos. ";
             return false;
         }
 
-        // Prepara la variable con atributos intermedios seguros. 
+        // Prepara la variable de la consulta con atributos intermedios seguros. 
         $sql = "INSERT INTO usuario (correo, contrasena, nombre, apellido, biografia, fotografia, rol, estado_cuenta)
                 VALUES (:correo, :contrasena, :nombre, :apellido, :biografia, :fotografia, :rol, :estado_cuenta)";
 
-        // Intenta la preparación del statement y asigna a los atributos definidos en la parte de arriba los valores recolectados en el objeto. 
+        // Intenta la preparación del statement y asigna a los atributos definidos en la parte de arriba con los valores recolectados en el objeto. 
         try {
             $stmt = $pdo->prepare($sql);
             $stmt->bindValue(':correo', $this->correo, PDO::PARAM_STR);
@@ -241,7 +241,7 @@ class Usuario
         // Creación del objeto pdo. 
         $pdo = $conexionObj->conectar();
 
-        // Intenta realizar una conexión a la base de datos. 
+        // Se evalúa si la conexión fue exitosa a la base de datos. 
         if ($pdo === null) {
             return null;
         }
@@ -282,7 +282,7 @@ class Usuario
         // Creación del objeto pdo. 
         $pdo = $conexionObj->conectar();
 
-        // Intenta realizar una conexión a la base de datos. 
+        // Se evalúa si la conexión fue exitosa a la base de datos. 
         if ($pdo === null) {
             return null;
         }
@@ -374,7 +374,7 @@ class Usuario
         }
     }
 
-    //* Actualiza únicamente la contraseña ya cifrada de un usuario.
+    // Actualiza únicamente la contraseña ya cifrada de un usuario.
     public function actualizarContrasena(int $idUsuario, string $contrasenaHash): bool
     {
 
